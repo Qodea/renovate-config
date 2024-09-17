@@ -1,0 +1,13 @@
+{
+    "peacock.favoriteColors": [
+        { "name": "Qodia Red", "value": "#EB4E40" },
+        { "name": "Qodia Orange", "value": "#FFA450" },
+        { "name": "Qodia Light Red", "value": "#f18980" },
+        { "name": "Qodia Light Orange", "value": "#fac38a" },
+        { "name": "Qodia Grey", "value": "#6e7774" }
+      ],
+    "peacock.affectActivityBar": false,
+    "peacock.affectStatusBar": false,
+    "peacock.affectTitleBar": true,
+    "peacock.surpriseMeOnStartup": true
+}
