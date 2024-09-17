@@ -1,0 +1,13 @@
+{
+  "baseBranches": ["main"],
+  "configMigration": true,
+  "extends": ["config:best-practices"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ],
+  "rebaseWhen": "conflicted"
+}
