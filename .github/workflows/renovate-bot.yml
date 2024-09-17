@@ -1,0 +1,61 @@
+name: renovate-bot
+
+on:
+  schedule:
+    - cron: '5 4 * * 2'
+  workflow_call:
+    inputs:
+      logLevel:
+        description: "Override default log level"
+        required: false
+        default: "info"
+        type: string
+      overrideSchedule:
+        description: "Override all schedules"
+        required: false
+        default: "false"
+        type: string
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: "Override default log level"
+        required: false
+        default: "info"
+        type: string
+      overrideSchedule:
+        description: "Override all schedules"
+        required: false
+        default: "false"
+        type: string
+
+concurrency: renovate-bot
+
+jobs:
+  renovate-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@31c86eb3b33c9b601a1f60f98dcbfd1d70f379b4 # v1
+        with:
+          app-id: ${{ secrets.QODY_APP_ID }}
+          private-key: ${{ secrets.QODY_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: Validate Renovate JSON
+        run: jq type .github/renovate.json
+
+      - name: Self-hosted Renovate
+        env:
+          LOG_LEVEL: ${{ inputs.logLevel || 'info' }}
+          RENOVATE_AUTODISCOVER_TOPICS: 'renovate-bot'
+          RENOVATE_FORCE: ${{ github.event.inputs.overrideSchedule == 'true' && '{''schedule'':null}' || '' }}
+          RENOVATE_ONBOARDING: "false"
+          RENOVATE_PLATFORM_COMMIT: 'true'
+          RENOVATE_REPOSITORIES: ${{ github.repository }}
+        uses: renovatebot/github-action@630a255a1f2f56c8d8ce160bed3e3ca577ca53e2 # v40.2.7
+        with:
+          configurationFile: .github/renovate.json
+          token: '${{ steps.generate-token.outputs.token }}'

@@ -9,5 +9,15 @@
     "peacock.affectActivityBar": false,
     "peacock.affectStatusBar": false,
     "peacock.affectTitleBar": true,
-    "peacock.surpriseMeOnStartup": true
+    "peacock.surpriseMeOnStartup": true,
+    "workbench.colorCustomizations": {
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#f0796e",
+      "titleBar.activeBackground": "#eb4e40",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#eb4e4099",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#fac38a",
+    "peacock.remoteColor": "#EB4E40"
 }
