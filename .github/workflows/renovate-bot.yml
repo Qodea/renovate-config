@@ -55,7 +55,7 @@ jobs:
           RENOVATE_ONBOARDING: "false"
           RENOVATE_PLATFORM_COMMIT: 'true'
           RENOVATE_REPOSITORIES: ${{ github.repository }}
-        uses: renovatebot/github-action@630a255a1f2f56c8d8ce160bed3e3ca577ca53e2 # v40.2.7
+        uses: renovatebot/github-action@a1ed1d0adddfdf138192d1fbe3150a80094dee6a # v40.3.1
         with:
           configurationFile: .github/renovate.json
           token: '${{ steps.generate-token.outputs.token }}'
