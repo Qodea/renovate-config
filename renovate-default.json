@@ -1,15 +1,28 @@
 {
-  "baseBranches": ["main"],
+  "baseBranches": [
+    "main"
+  ],
   "configMigration": true,
-  "extends": ["config:best-practices"],
-  "labels": ["dependencies"],
+  "extends": [
+    "config:best-practices"
+  ],
+  "labels": [
+    "dependencies"
+  ],
   "packageRules": [
     {
       "groupName": "{{manager}} non-major dependencies",
       "groupSlug": "{{manager}}-non-major",
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true,
+      "matchPackageNames": [
+        "*"
+      ]
     }
   ],
   "rebaseWhen": "conflicted"
