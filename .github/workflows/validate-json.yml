@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install the latest version of uv and set the python version
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@2c7142f755d7b37bdaea8d226073714c732889fe # v6
         with:
           python-version: 3.13
       - name: Checkout
