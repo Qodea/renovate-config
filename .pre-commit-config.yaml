@@ -28,5 +28,6 @@ repos:
           \.(github|gitlab)/renovate\.(json|json5)|
           \.renovaterc|
           \.renovaterc\.(json|json5)|
-          renovate-default.json
+          renovate-default.json|
+          renovate-lite.json
         )$
