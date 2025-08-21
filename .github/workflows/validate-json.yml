@@ -20,4 +20,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run check-jsonschema
-        run: uvx check-jsonschema --builtin-schema vendor.renovate renovate-default.json .github/renovate.json
+        run: uvx check-jsonschema --builtin-schema vendor.renovate renovate-default.json .github/renovate.json renovate-lite.json
