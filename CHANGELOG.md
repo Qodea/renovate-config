@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/Qodea/renovate-config/compare/v1.0.1...v1.1.0) (2025-10-16)
+
+
+### Features
+
+* add a lightweight renovate config ([ae00493](https://github.com/Qodea/renovate-config/commit/ae0049347cc37f3af68a1c47c770ea362b460bc8))
+* add a lightweight renovate config ([99695ab](https://github.com/Qodea/renovate-config/commit/99695abc4b7f7068ab4abd2d0efb66b987d3221d))
+
 ## [1.0.1](https://github.com/Qodea/renovate-config/compare/v1.0.0...v1.0.1) (2025-07-24)
 
 
