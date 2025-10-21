@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Generate a token
         id: generate-token
-        uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # v2
+        uses: actions/create-github-app-token@67018539274d69449ef7c02e8e71183d1719ab42 # v2
         with:
           app-id: ${{ secrets.QODY_APP_ID }}
           private-key: ${{ secrets.QODY_PRIVATE_KEY }}
@@ -55,7 +55,7 @@ jobs:
           RENOVATE_ONBOARDING: "false"
           RENOVATE_PLATFORM_COMMIT: 'true'
           RENOVATE_REPOSITORIES: ${{ github.repository }}
-        uses: renovatebot/github-action@a4578d5584ac7a60d0f831537a481de7d00b9260 # v43.0.4
+        uses: renovatebot/github-action@aec779d4f7845f8431ddf403cf9659d4702ddde0 # v43.0.18
         with:
           configurationFile: .github/renovate.json
           token: '${{ steps.generate-token.outputs.token }}'
