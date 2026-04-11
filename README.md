@@ -1,4 +1,4 @@
 # Renovate Bot Config
 
 Central Renovate Config Repo
-Runs with Qody-Bot Github App
+Runs with Repo-Bot2 Github App
